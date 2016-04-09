@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace Strategy.Violacao
+﻿namespace Strategy.Violacao
 {
     public class GeradorBoleto
     {
@@ -20,7 +14,7 @@ namespace Strategy.Violacao
 
             if (banco == "ITAU")
             {
-                codigo = this.GerarBoletoITAU();
+                codigo = this.GerarBoletoItau();
 
             }
             else if (banco == "Brasil")
@@ -40,7 +34,7 @@ namespace Strategy.Violacao
         /// metodo responsavel pela geracao do codigo de barras do Banco Itau
         /// </summary>
         /// <returns>codigo de barras gerado</returns>
-        public string GerarBoletoITAU()
+        public virtual string GerarBoletoItau()
         {
             return string.Empty;
         }
@@ -49,7 +43,7 @@ namespace Strategy.Violacao
         /// metodo responsavel pela geracao do codigo de barras do Banco do Brasil
         /// </summary>
         /// <returns>codigo de barras gerado</returns>
-        public string GerarBoletoBancoBrasil()
+        public virtual string GerarBoletoBancoBrasil()
         {
             return string.Empty;
         }
@@ -59,7 +53,7 @@ namespace Strategy.Violacao
         /// metodo responsavel pela geracao do codigo de barras do Banco Bradesco
         /// </summary>
         /// <returns>codigo de barras gerado</returns>
-        public string GerarBancoBradesco()
+        public virtual string GerarBancoBradesco()
         {
             return string.Empty;
         }

@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using Strategy.DesignPattern;
 
 namespace Strategy
 {
@@ -10,6 +6,15 @@ namespace Strategy
     {
         static void Main(string[] args)
         {
+            var boletoContext = new BoletoContext(new BancoBrasilBoleto());
+
+            boletoContext.GerarBoleto();
+
+
+            boletoContext = new BoletoContext(new ItauBoleto());
+
+            boletoContext.GerarBoleto();
+
         }
     }
 }
